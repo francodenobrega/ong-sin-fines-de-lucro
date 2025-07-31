@@ -1,0 +1,205 @@
+/* === RESET GENERAL === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === CUERPO Y FUENTE === */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+/* === CONTENEDORES PRINCIPALES === */
+.container,
+.menu {
+    max-width: 500px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* === TÍTULOS === */
+h1,
+h2 {
+    color: #004085;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* === FORMULARIOS === */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="time"],
+form input[type="date"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* === ENLACES GENERALES === */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* === MENÚ PRINCIPAL === */
+.menu a {
+    display: block;
+    margin: 10px auto;
+    padding: 12px;
+    width: 80%;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.menu a:hover {
+    background-color: #0056b3;
+}
+
+/* === LISTAS DE CAMPAÑAS (carrito.php) === */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    border-radius: 5px;
+}
+
+li a {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+
+/* === CARDS DE RESULTADOS (procesar_filtro.php) === */
+.evento-card {
+    background-color: #e8f0fe;
+    padding: 15px;
+    margin-top: 20px;
+    border-left: 5px solid #007bff;
+    border-radius: 6px;
+}
+
+/* === MENSAJES DE ESTADO (vacío, error, éxito) === */
+.mensaje {
+    padding: 12px;
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* === PANEL DE ADM === */
+.btn-admin {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #004080;
+    color: white;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-admin:hover {
+    background-color: #0066cc;
+}
+
+.panel-admin {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #eef4ff;
+    border-radius: 10px;
+    border: 1px solid #cce0ff;
+}
+
+.panel-admin h2 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.panel-admin ul {
+    list-style: none;
+    padding: 0;
+}
+
+.panel-admin li {
+    margin-bottom: 10px;
+}
+
+/* === TABLA DE RESULTADOS (reporte_donaciones.php) === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #004080;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+

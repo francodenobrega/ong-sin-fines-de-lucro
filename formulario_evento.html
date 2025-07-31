@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Evento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h2>Formulario de Registro de Eventos</h2>
+    <form method="POST" action="registrar_evento.php">
+        <label>Descripción:</label><br>
+        <input type="text" name="descripcion" required><br><br>
+
+        <label>Tipo:</label><br>
+        <input type="text" name="tipo" required><br><br>
+
+        <label>Lugar:</label><br>
+        <input type="text" name="lugar" required><br><br>
+
+        <label>Fecha:</label><br>
+        <input type="date" name="fecha" required><br><br>
+
+        <label>Hora:</label><br>
+        <input type="time" name="hora" required><br><br>
+
+        <input type="submit" value="Registrar Evento">
+    </form>
+    </div>
+</body>
+</html>

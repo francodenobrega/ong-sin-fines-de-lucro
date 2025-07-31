@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Donación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>💰 Registro de Donaciones</h1>
+        <form id="donacionForm" action="insertar_donacion.php" method="POST">
+            <label for="monto">Monto de la donación (CLP):</label>
+            <input type="number" id="monto" name="monto" step="0.01" min="100" required>
+
+            <label for="fecha">Fecha de la donación:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="id_proyecto">ID del proyecto:</label>
+            <input type="number" id="id_proyecto" name="id_proyecto" required>
+
+            <label for="id_donante">ID del donante:</label>
+            <input type="number" id="id_donante" name="id_donante" required>
+
+            <input type="submit" value="Registrar Donación">
+        </form>
+
+        <br>
+        <a href="inicio.html" class="btn-secundario">⬅ Volver al inicio</a>
+    </div>
+
+    <script>
+    document.getElementById('donacionForm').addEventListener('submit', function(e) {
+        const monto = parseFloat(document.getElementById('monto').value);
+        if (monto < 100) {
+            alert("⚠️ El monto mínimo permitido es de $100.");
+            e.preventDefault();
+        }
+    });
+    </script>
+</body>
+</html>

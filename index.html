@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Donar a Nuestra Causa</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+    <h2>Formulario de Donación</h2>
+    <form method="POST" action="procesar_donacion.php">
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" required><br><br>
+
+        <label>Monto (USD):</label><br>
+        <input type="number" name="monto" step="0.01" required><br><br>
+
+        <label>Método de Pago:</label><br>
+        <select name="metodo" required>
+            <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
+            <option value="PayPal">PayPal</option>
+        </select><br><br>
+
+        <input type="submit" value="Donar ahora">
+    </form>
+    </div>
+</body>
+</html>
