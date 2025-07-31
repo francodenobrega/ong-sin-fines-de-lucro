@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Registrar Donación</title>
+    <title>Formulario de Donación</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="contenedor">
-        <h1>💰 Registro de Donaciones</h1>
-        <form id="donacionForm" action="insertar_donacion.php" method="POST">
-            <label for="monto">Monto de la donación (CLP):</label>
-            <input type="number" id="monto" name="monto" step="0.01" min="100" required>
+        <h2>💖 Realizar una Donación</h2>
+        <form action="insertar_donacion.php" method="POST">
+            <label for="id_proyecto">Proyecto:</label>
+            <select name="id_proyecto" required>
+                <option value="1">Educación Rural</option>
+                <option value="2">Salud Comunitaria</option>
+            </select>
 
-            <label for="fecha">Fecha de la donación:</label>
-            <input type="date" id="fecha" name="fecha" required>
+            <label for="id_donante">Donante (ID):</label>
+            <input type="number" name="id_donante" min="1" required>
 
-            <label for="id_proyecto">ID del proyecto:</label>
-            <input type="number" id="id_proyecto" name="id_proyecto" required>
+            <label for="monto">Monto a donar (CLP):</label>
+            <input type="number" name="monto" min="1000" required>
 
-            <label for="id_donante">ID del donante:</label>
-            <input type="number" id="id_donante" name="id_donante" required>
+            <label for="fecha">Fecha de donación:</label>
+            <input type="date" name="fecha" required>
 
-            <input type="submit" value="Registrar Donación">
+            <button type="submit" class="btn">Donar</button>
         </form>
-
         <br>
         <a href="inicio.html" class="btn-secundario">⬅ Volver al inicio</a>
     </div>
-
-    <script>
-    document.getElementById('donacionForm').addEventListener('submit', function(e) {
-        const monto = parseFloat(document.getElementById('monto').value);
-        if (monto < 100) {
-            alert("⚠️ El monto mínimo permitido es de $100.");
-            e.preventDefault();
-        }
-    });
-    </script>
 </body>
+
 </html>
